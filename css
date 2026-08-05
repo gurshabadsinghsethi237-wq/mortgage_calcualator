@@ -7,3 +7,11 @@ button:hover { background: #0056b3; }
 h3 { margin-top: 20px; text-align: center; color: #333; }
 .reset-btn { background: #6c757d; margin-top: 10px; }
 .reset-btn:hover { background: #5a6268; }
+.reset-btn { 
+    background: #6c757d; 
+    margin-top: 10px; 
+}
+.reset-btn:hover { 
+    background: #5a6268; 
+}
+
