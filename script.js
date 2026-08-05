@@ -16,3 +16,10 @@ function calculateMortgage() {
 
     document.getElementById('result').innerText = `Monthly Payment: $${monthlyPayment.toFixed(2)}`;
 }
+function clearFields() {
+    document.getElementById('price').value = '';
+    document.getElementById('down').value = '';
+    document.getElementById('rate').value = '';
+    document.getElementById('term').value = '';
+    document.getElementById('result').innerText = 'Monthly Payment: $0.00';
+}
