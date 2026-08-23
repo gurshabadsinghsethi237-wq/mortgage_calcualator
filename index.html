@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Mortgage Tool</title>
+    <meta name="description" content="Calculate your monthly mortgage payments easily with this free interactive mortgage calculator. Estimate home price, down payment, interest rate, and loan term.">
+    <title>Free Mortgage Calculator | Estimate Monthly Payments</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator-card">
-        <h2>Mortgage Calculator</h2>
+    <main class="calculator-card">
+        <h1>Mortgage Calculator</h1>
         
-        <label>Home Price ($):</label>
+        <label for="price">Home Price ($):</label>
         <input type="number" id="price" value="300000">
         
-        <label>Down Payment ($):</label>
+        <label for="down">Down Payment ($):</label>
         <input type="number" id="down" value="60000">
         
-        <label>Interest Rate (%):</label>
+        <label for="rate">Interest Rate (%):</label>
         <input type="number" id="rate" value="6.5" step="0.1">
         
-        <label>Loan Term (Years):</label>
+        <label for="term">Loan Term (Years):</label>
         <input type="number" id="term" value="30">
         
         <button onclick="calculateMortgage()">Calculate Payment</button>
         <button onclick="clearFields()" class="reset-btn">Reset Inputs</button>
         
         <h3 id="result">Monthly Payment: $0.00</h3>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
