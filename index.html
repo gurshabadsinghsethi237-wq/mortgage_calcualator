@@ -1,33 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 1. Technical SEO Configuration Logic -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate your monthly mortgage payments easily with this free interactive mortgage calculator. Estimate home price, down payment, interest rate, and loan term.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- 2. On-Page SEO Visibility Logic -->
     <title>Free Mortgage Calculator | Estimate Monthly Payments</title>
+    <meta name="description" content="Calculate your monthly mortgage payments, interest rates, and loan terms with our easy-to-use free mortgage calculator.">
+    <link rel="canonical" href="https://yourdomain.com">
+
+    <!-- 3. Asset Dependency Logic -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- 4. Structured Data Schema Logic (Advanced SEO for Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Mortgage Calculator Tool",
+      "url": "https://yourdomain.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript and HTML5.",
+      "description": "An interactive tool to estimate monthly mortgage payments including principal, interest, taxes, and insurance."
+    }
+    </script>
 </head>
 <body>
-    <main class="calculator-card">
-        <h1>Mortgage Calculator</h1>
-        
-        <label for="price">Home Price ($):</label>
-        <input type="number" id="price" value="300000">
-        
-        <label for="down">Down Payment ($):</label>
-        <input type="number" id="down" value="60000">
-        
-        <label for="rate">Interest Rate (%):</label>
-        <input type="number" id="rate" value="6.5" step="0.1">
-        
-        <label for="term">Loan Term (Years):</label>
-        <input type="number" id="term" value="30">
-        
-        <button onclick="calculateMortgage()">Calculate Payment</button>
-        <button onclick="clearFields()" class="reset-btn">Reset Inputs</button>
-        
-        <h3 id="result">Monthly Payment: $0.00</h3>
+
+    <!-- 5. Semantic Header & Branding Logic -->
+    <header>
+        <div class="logo">Financial Tools</div>
+    </header>
+
+    <!-- 6. Document Outline & Content Logic (Core SEO Target) -->
+    <main>
+        <section id="calculator-app">
+            <!-- H1 containing high-value, primary search keywords -->
+            <h1>Free Online Mortgage Calculator</h1>
+            <p>Estimate your monthly loan payments by entering your home price, down payment, and loan terms below.</p>
+
+            <!-- Interactive App Interface UI Container -->
+            <div class="calculator-container">
+                <form id="mortgage-form" onsubmit="return false;">
+                    <div class="input-group">
+                        <label for="home-price">Home Price ($)</label>
+                        <input type="number" id="home-price" value="400000" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="down-payment">Down Payment ($)</label>
+                        <input type="number" id="down-payment" value="80000" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="interest-rate">Interest Rate (%)</label>
+                        <input type="number" id="interest-rate" step="0.01" value="6.5" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="loan-term">Loan Term (Years)</label>
+                        <select id="loan-term">
+                            <option value="15">15 Years</option>
+                            <option value="30" selected>30 Years</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="calculate-btn">Calculate Payment</button>
+                </form>
+
+                <!-- Results Output Target Display Box -->
+                <div class="results-display">
+                    <h2>Estimated Monthly Payment</h2>
+                    <div id="monthly-payment-output" class="payment-amount">$0.00</div>
+                </div>
+            </div>
+        </section>
     </main>
-    <script src="script.js"></script>
+
+    <!-- 7. Footer Boilerplate & Authority Links -->
+    <footer>
+        <p>&copy; 2026 Financial Tools. All rights reserved.</p>
+    </footer>
+
+    <!-- 8. Performance Optimization Logic (Non-blocking Javascript) -->
+    <script src="script.js" defer></script>
 </body>
 </html>
