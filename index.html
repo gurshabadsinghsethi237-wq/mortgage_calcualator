@@ -1,87 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- 1. Technical SEO Configuration Logic -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    
-    <!-- 2. On-Page SEO Visibility Logic -->
-    <title>Free Mortgage Calculator | Estimate Monthly Payments</title>
-    <meta name="description" content="Calculate your monthly mortgage payments, interest rates, and loan terms with our easy-to-use free mortgage calculator.">
-    <link rel="canonical" href="https://yourdomain.com">
+    <title>Free Mortgage Calculator - Estimate Your Monthly Payments</title>
+    <meta name="description"
+        content="Calculate your monthly home loan payments easily. Input your loan amount, interest rate, and term to see your estimated costs and breakdown instantly.">
 
-    <!-- 3. Asset Dependency Logic -->
+    <!-- Link to your external stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- 4. Structured Data Schema Logic (Advanced SEO for Google) -->
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js" defer></script>
+
+    <!-- Canonical Tag - Links directly to your real Netlify site -->
+    <link rel="canonical" href="https://netlify.app">
+
+    <!-- SEO Structured Data Schema - Configured with your live link -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Mortgage Calculator Tool",
-      "url": "https://yourdomain.com",
-      "applicationCategory": "BusinessApplication",
+      "name": "Mortgage Calculator",
+      "url": "https://netlify.app",
+      "applicationCategory": "FinanceApplication",
       "operatingSystem": "All",
-      "browserRequirements": "Requires JavaScript and HTML5.",
-      "description": "An interactive tool to estimate monthly mortgage payments including principal, interest, taxes, and insurance."
+      "browserRequirements": "Requires JavaScript",
+      "description": "A free online web application to estimate monthly mortgage payments, interest breakdown, and principal loan tracking."
     }
     </script>
 </head>
+
 <body>
 
-    <!-- 5. Semantic Header & Branding Logic -->
+    <!-- Semantic Header Block -->
     <header>
-        <div class="logo">Financial Tools</div>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">Home Finance Tools</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- 6. Document Outline & Content Logic (Core SEO Target) -->
-    <main>
-        <section id="calculator-app">
-            <!-- H1 containing high-value, primary search keywords -->
-            <h1>Free Online Mortgage Calculator</h1>
-            <p>Estimate your monthly loan payments by entering your home price, down payment, and loan terms below.</p>
+    <!-- Main Content Area -->
+    <main class="container">
+        <article>
+            <!-- Primary H1 Title Tag for SEO -->
+            <h1>Mortgage Calculator</h1>
+            <p class="lead-text">Plan your budget by calculating your estimated monthly home loan payments instantly.
+            </p>
 
-            <!-- Interactive App Interface UI Container -->
-            <div class="calculator-container">
-                <form id="mortgage-form" onsubmit="return false;">
+            <!-- Calculator Application Container -->
+            <section class="calculator-box" aria-label="Mortgage Calculation Tool">
+                <form id="mortgage-form">
                     <div class="input-group">
                         <label for="home-price">Home Price ($)</label>
-                        <input type="number" id="home-price" value="400000" required>
+                        <input type="number" id="home-price" name="homePrice" value="400000" required>
                     </div>
+
                     <div class="input-group">
                         <label for="down-payment">Down Payment ($)</label>
-                        <input type="number" id="down-payment" value="80000" required>
+                        <input type="number" id="down-payment" name="downPayment" value="80000" required>
                     </div>
+
                     <div class="input-group">
                         <label for="interest-rate">Interest Rate (%)</label>
-                        <input type="number" id="interest-rate" step="0.01" value="6.5" required>
+                        <input type="number" id="interest-rate" name="interestRate" step="0.01" value="6.5" required>
                     </div>
+
                     <div class="input-group">
                         <label for="loan-term">Loan Term (Years)</label>
-                        <select id="loan-term">
-                            <option value="15">15 Years</option>
-                            <option value="30" selected>30 Years</option>
+                        <select id="loan-term" name="loanTerm">
+                            <option value="30">30 Years (Fixed)</option>
+                            <option value="20">20 Years (Fixed)</option>
+                            <option value="15">15 Years (Fixed)</option>
+                            <option value="10">10 Years (Fixed)</option>
                         </select>
                     </div>
-                    <button type="submit" id="calculate-btn">Calculate Payment</button>
+
+                    <button type="submit" class="btn-calculate">Calculate Payment</button>
                 </form>
 
-                <!-- Results Output Target Display Box -->
-                <div class="results-display">
+                <!-- Results Output Display -->
+                <div id="results-container">
                     <h2>Estimated Monthly Payment</h2>
-                    <div id="monthly-payment-output" class="payment-amount">$0.00</div>
+                    <p class="payment-amount" aria-live="polite">$0.00</p>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- SEO Semantic Content Block Below the App -->
+            <section class="info-content">
+                <h2>How to Use This Mortgage Calculator</h2>
+                <p>To accurately calculate your potential monthly home payments, simply enter your home value, down
+                    payment amount, and target loan terms. Our financial app handles the complex math behind principal
+                    and interest schedules automatically.</p>
+
+                <h2>What Factors Impact Your Monthly Payments?</h2>
+                <ul>
+                    <li><strong>Loan Principal:</strong> The total amount of money borrowed to buy the home.</li>
+                    <li><strong>Interest Rate:</strong> The annual percentage fee charged by lenders to service your
+                        loan.</li>
+                    <li><strong>Amortization Period:</strong> The length of time you have to fully repay the balance.
+                    </li>
+                </ul>
+            </section>
+        </article>
     </main>
 
-    <!-- 7. Footer Boilerplate & Authority Links -->
+    <!-- Footer Area -->
     <footer>
-        <p>&copy; 2026 Financial Tools. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Home Finance Tools. All financial estimates are informational tools only.</p>
+        </div>
     </footer>
 
-    <!-- 8. Performance Optimization Logic (Non-blocking Javascript) -->
-    <script src="script.js" defer></script>
 </body>
+
 </html>
